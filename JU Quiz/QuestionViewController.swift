@@ -27,7 +27,7 @@ class QuestionViewController: UIViewController {
         [buttonAnswerA, buttonAnswerB, buttonAnswerC, buttonAnswerD].forEach { (button) in
             button?.layer.cornerRadius = 10
             buttonAnswerA.layer.shadowOpacity = 0.7
-            buttonAnswerA.layer.shadowOffset = CGSize(width: 3, height: 3)
+            buttonAnswerA.layer.shadowOffset = CGSize(width: 4, height: 4)
             buttonAnswerA.layer.shadowRadius = 15.0
             buttonAnswerA.layer.shadowColor = UIColor.darkGray.cgColor
         }
