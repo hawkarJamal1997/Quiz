@@ -28,7 +28,7 @@
         <!--JU Quiz-->
         <scene sceneID="CfO-Gc-TgO">
             <objects>
-                <viewController id="6mi-Mo-iMw" sceneMemberID="viewController">
+                <viewController id="6mi-Mo-iMw" customClass="StartViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="7iF-tP-k8Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,7 @@
         <!--Question View Controller-->
         <scene sceneID="BV2-SA-5AP">
             <objects>
-                <viewController id="NV5-nj-59B" customClass="QuestionViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="NV5-nj-59B" customClass="QuestionViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vtj-8a-ucl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,7 @@
                         <outlet property="buttonAnswerB" destination="6MI-Wn-pmz" id="anr-bv-Dub"/>
                         <outlet property="buttonAnswerC" destination="xKb-cL-ZVz" id="9ye-qe-luQ"/>
                         <outlet property="buttonAnswerD" destination="LOP-PS-DJk" id="NRN-FT-rbU"/>
-                        <outlet property="labelQuestion" destination="nf6-SD-S2m" id="iCQ-y8-2xI"/>
+                        <outlet property="questionLabel" destination="nf6-SD-S2m" id="6bp-yX-wjq"/>
                         <outlet property="questionView" destination="Vtj-8a-ucl" id="3k1-me-i1b"/>
                         <segue destination="elh-ih-Tbg" kind="show" identifier="ResultView" id="eJx-ud-Ptz"/>
                     </connections>
