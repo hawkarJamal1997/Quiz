@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTW-8j-UPm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502.89855072463774" y="59.598214285714285"/>
+            <point key="canvasLocation" x="471" y="60"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="BV2-SA-5AP">
@@ -170,11 +170,28 @@
                         <outlet property="buttonAnswerD" destination="LOP-PS-DJk" id="NRN-FT-rbU"/>
                         <outlet property="labelQuestion" destination="nf6-SD-S2m" id="iCQ-y8-2xI"/>
                         <outlet property="questionView" destination="Vtj-8a-ucl" id="3k1-me-i1b"/>
+                        <segue destination="elh-ih-Tbg" kind="show" identifier="ResultView" id="eJx-ud-Ptz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGV-c5-opi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="-325"/>
+            <point key="canvasLocation" x="1274" y="-287"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="QKQ-k3-ltb">
+            <objects>
+                <viewController id="elh-ih-Tbg" customClass="ResultViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjH-dp-elo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="F7W-cD-BUf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NE6-zb-iot"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kik-aS-hih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2117" y="-287"/>
         </scene>
         <!--Information View Controller-->
         <scene sceneID="v7o-zq-Ljq">
@@ -216,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gB0-Sc-bnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="332"/>
+            <point key="canvasLocation" x="1274" y="422"/>
         </scene>
     </scenes>
     <resources>

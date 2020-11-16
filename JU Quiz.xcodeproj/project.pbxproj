@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		783A3E48255CAE510011C21F /* info.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 783A3E46255CAE510011C21F /* info.jpg */; };
 		783A3E49255CAE510011C21F /* infoProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 783A3E47255CAE510011C21F /* infoProfile.png */; };
+		78759CDE2562F9050070A48A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78759CDD2562F9050070A48A /* ResultViewController.swift */; };
+		78759CE62562FA6A0070A48A /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78759CE52562FA6A0070A48A /* ResultView.swift */; };
+		78759CEB256309060070A48A /* resultBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 78759CEA256309060070A48A /* resultBackground.png */; };
 		8A7F795B254AF158009F4299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F795A254AF158009F4299 /* AppDelegate.swift */; };
 		8A7F795D254AF158009F4299 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F795C254AF158009F4299 /* SceneDelegate.swift */; };
 		8A7F7962254AF158009F4299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7F7960254AF158009F4299 /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 /* Begin PBXFileReference section */
 		783A3E46255CAE510011C21F /* info.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = info.jpg; sourceTree = "<group>"; };
 		783A3E47255CAE510011C21F /* infoProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoProfile.png; sourceTree = "<group>"; };
+		78759CDD2562F9050070A48A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		78759CE52562FA6A0070A48A /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		78759CEA256309060070A48A /* resultBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resultBackground.png; sourceTree = "<group>"; };
 		8A7F7957254AF158009F4299 /* JU Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JU Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7F795A254AF158009F4299 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A7F795C254AF158009F4299 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,8 @@
 				8A7F796B254AF15B009F4299 /* Info.plist */,
 				8A7F7963254AF158009F4299 /* JU_Quiz.xcdatamodeld */,
 				8A7F7999254B03F7009F4299 /* QuestionViewController.swift */,
+				78759CDD2562F9050070A48A /* ResultViewController.swift */,
+				78759CE52562FA6A0070A48A /* ResultView.swift */,
 			);
 			path = "JU Quiz";
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 		8AD818BE2552A2F40054533B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				78759CEA256309060070A48A /* resultBackground.png */,
 				783A3E46255CAE510011C21F /* info.jpg */,
 				783A3E47255CAE510011C21F /* infoProfile.png */,
 				8AD818BF2552A3220054533B /* appBackground.png */,
@@ -259,6 +268,7 @@
 				8AD818C02552A3220054533B /* appBackground.png in Resources */,
 				8A7F7967254AF15B009F4299 /* Assets.xcassets in Resources */,
 				8A7F7962254AF158009F4299 /* Main.storyboard in Resources */,
+				78759CEB256309060070A48A /* resultBackground.png in Resources */,
 				783A3E49255CAE510011C21F /* infoProfile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +299,8 @@
 				8A7F799A254B03F7009F4299 /* QuestionViewController.swift in Sources */,
 				8A7F7965254AF158009F4299 /* JU_Quiz.xcdatamodeld in Sources */,
 				8AD818CD2552AF040054533B /* InformationViewController.swift in Sources */,
+				78759CE62562FA6A0070A48A /* ResultView.swift in Sources */,
+				78759CDE2562F9050070A48A /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7GN9YHY4EA;
 				INFOPLIST_FILE = "JU Quiz/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,7 +500,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7GN9YHY4EA;
 				INFOPLIST_FILE = "JU Quiz/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

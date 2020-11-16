@@ -17,6 +17,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var buttonAnswerD: UIButton!
     @IBOutlet var questionView: UIView!
     
+    private var haveWon = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         questionView.layer.contents = #imageLiteral(resourceName: "appBackground.png" ).cgImage
@@ -48,31 +50,34 @@ class QuestionViewController: UIViewController {
     
     private func showWrongAnswerAlert(button: UIButton) {
         button.backgroundColor = .red
+        buttonAnswerC.backgroundColor = .green
         let alertController = UIAlertController(title: "Wrong!", message: "try again", preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "oh my..", style: UIAlertAction.Style.default, handler: { (_) in
-            alertController.dismiss(animated: true, completion:nil)
+                self.performSegue(withIdentifier: "ResultView", sender: nil)
         }))
         present(alertController, animated: true, completion: nil)
     }
     
     private func showRightAnswerAlert(button: UIButton) {
+        haveWon = true
         button.backgroundColor = .green
         let alertController = UIAlertController(title: "Right Answer!", message: "Go on..", preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "Yes!", style: UIAlertAction.Style.default, handler: { (_) in
-            alertController.dismiss(animated: true, completion:nil)
+                self.performSegue(withIdentifier: "ResultView", sender: nil)
         }))
         present(alertController, animated: true, completion: nil)
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let resultViewController = segue.destination as? ResultViewController {
+            resultViewController.resultView.resultLabel.text = haveWon ? "👍" : "👎"
+        }
     }
-    */
+    
 
 }
