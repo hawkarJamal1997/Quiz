@@ -26,11 +26,12 @@ class QuestionViewController: UIViewController {
     var question: Question?
     var numberOfQuestions = 0
     var rightAnswers = 0
+    var categories = [String]()
+    var difficulty = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         questionView.layer.contents = #imageLiteral(resourceName: "appBackground.png" ).cgImage
-        //question label
         questionLabel.layer.cornerRadius = 20
         questionLabel.layer.masksToBounds = true
         
@@ -48,7 +49,7 @@ class QuestionViewController: UIViewController {
         let correctButton = buttons.removeFirst()
         correctButton?.setTitle(question?.correctAnswer, for: .normal)
         
-        question?.incorrectAnswer.forEach({ (answer) in
+        question?.incorrectAnswers.forEach({ (answer) in
             let button = buttons.removeFirst()
             button?.setTitle(answer, for: .normal)
             
@@ -98,6 +99,8 @@ class QuestionViewController: UIViewController {
         questionViewController.questions = questions
         questionViewController.numberOfQuestions = numberOfQuestions
         questionViewController.rightAnswers = rightAnswers
+        questionViewController.categories = categories
+        questionViewController.difficulty = difficulty
         navigationController?.pushViewController(questionViewController, animated: true)
     }
 
@@ -107,7 +110,9 @@ class QuestionViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultViewController = segue.destination as? ResultViewController {
-            resultViewController.resultView.resultLabel.text = "You got \(rightAnswers) right from \(numberOfQuestions) questions."
+            resultViewController.resultView.resultLabel.lineBreakMode = .byWordWrapping
+            resultViewController.resultView.resultLabel.numberOfLines = 0
+            resultViewController.resultView.resultLabel.text = "You got \(rightAnswers) right from \(numberOfQuestions) questions. \nCategories: \(categories) \nDifficulty: \(difficulty)"
         }
     }
     

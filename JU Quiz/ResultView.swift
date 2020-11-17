@@ -24,7 +24,7 @@ class ResultView: UIView {
     }
     
     private func setupView() {
-        backgroundColor = .white
+        backgroundColor = .systemBackground
         
         titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         titleLabel.adjustsFontForContentSizeCategory = true
@@ -43,6 +43,15 @@ class ResultView: UIView {
         resultLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30).isActive = true
         resultLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor).isActive = true
     
+        //Bakcground for score
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "resultBoard"))
+        addSubview(imageView)
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.topAnchor.constraint(equalTo: resultLabel.topAnchor, constant: 70).isActive = true
+        imageView.centerXAnchor.constraint(equalTo: resultLabel.centerXAnchor).isActive = true
+    
+        
         homeButton.setTitleColor(.systemGray, for: .normal)
         homeButton.setTitle(NSLocalizedString("Return to Start", comment: "Result button title"), for: .normal)
         addSubview(homeButton)

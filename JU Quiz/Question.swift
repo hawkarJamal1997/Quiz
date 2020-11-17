@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Question {
+struct Question: Decodable {
     
-    enum QuestionType: String {
+    enum QuestionType: String, Decodable{
         case multiple
     }
     
-    enum Difficulty: String {
+    enum Difficulty: String, Decodable{
         case easy, medium, hard
     }
     let category: String
@@ -21,6 +21,6 @@ struct Question {
     let difficulty: Difficulty
     let question: String
     let correctAnswer: String
-    let incorrectAnswer: [String]
+    let incorrectAnswers: [String]
     
 }

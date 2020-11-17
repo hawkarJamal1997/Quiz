@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXA-Y6-GLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-385" y="60"/>
+            <point key="canvasLocation" x="-1175" y="60"/>
         </scene>
         <!--JU Quiz-->
         <scene sceneID="CfO-Gc-TgO">
@@ -46,7 +46,7 @@
                                             <color key="titleShadowColor" systemColor="tertiarySystemBackgroundColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="NV5-nj-59B" kind="show" id="HwZ-2z-1cN"/>
+                                            <segue destination="4Gs-0X-MZ6" kind="show" id="TRL-Wu-QXa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjK-N2-D4G">
@@ -78,7 +78,96 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTW-8j-UPm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="60"/>
+            <point key="canvasLocation" x="-296" y="60"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="7Ir-va-uaM">
+            <objects>
+                <viewController id="4Gs-0X-MZ6" customClass="StartViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="1YO-4Z-sx4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="MtF-1s-PXT">
+                                <rect key="frame" x="100" y="208" width="214" height="554"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-wL-gVe">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="101"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-Af-imY">
+                                                <rect key="frame" x="-2" y="0.0" width="218" height="81.5"/>
+                                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                                <color key="maximumTrackTintColor" systemColor="systemGreenColor"/>
+                                                <color key="thumbTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="sliderValue:" destination="4Gs-0X-MZ6" eventType="valueChanged" id="6Ff-5R-SbW"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB6-GG-Z0d">
+                                                <rect key="frame" x="0.0" y="80.5" width="214" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bub-3R-dgU">
+                                        <rect key="frame" x="0.0" y="151" width="214" height="101"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="Easy">
+                                            <color key="titleColor" systemColor="systemGreenColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonEasy:" destination="4Gs-0X-MZ6" eventType="touchUpInside" id="y7M-9h-eZk"/>
+                                            <segue destination="NV5-nj-59B" kind="show" id="S4g-Dx-P65"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NII-9B-Lbo">
+                                        <rect key="frame" x="0.0" y="302" width="214" height="101"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="Medium">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonMedium:" destination="4Gs-0X-MZ6" eventType="touchUpInside" id="oyh-70-f7O"/>
+                                            <segue destination="NV5-nj-59B" kind="show" id="UQp-No-L2b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC3-4k-0eB">
+                                        <rect key="frame" x="0.0" y="453" width="214" height="101"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="Hard">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonHard:" destination="4Gs-0X-MZ6" eventType="touchUpInside" id="mAO-X2-zmU"/>
+                                            <segue destination="NV5-nj-59B" kind="show" id="xkZ-Sl-fYd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D8D-0a-aqe"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="MtF-1s-PXT" firstAttribute="top" secondItem="D8D-0a-aqe" secondAttribute="top" constant="120" id="2XC-IZ-4W0"/>
+                            <constraint firstItem="MtF-1s-PXT" firstAttribute="bottom" secondItem="D8D-0a-aqe" secondAttribute="bottom" constant="-100" id="KaZ-fz-xLg"/>
+                            <constraint firstItem="MtF-1s-PXT" firstAttribute="trailing" secondItem="D8D-0a-aqe" secondAttribute="trailing" constant="-100" id="W5Z-XP-hXY"/>
+                            <constraint firstItem="MtF-1s-PXT" firstAttribute="leading" secondItem="D8D-0a-aqe" secondAttribute="leading" constant="100" id="gWI-X0-DtY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XVw-59-7Oz"/>
+                    <connections>
+                        <outlet property="slider" destination="swQ-Af-imY" id="U3R-DU-rCR"/>
+                        <outlet property="sliderValueLabel" destination="WB6-GG-Z0d" id="LWR-a6-ZL4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBx-4R-Zws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="-287"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="BV2-SA-5AP">
@@ -91,9 +180,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FSh-JU-eZj">
                                 <rect key="frame" x="40" y="118" width="334" height="724"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="what is your favorite pet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf6-SD-S2m">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="what is your favorite pet?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf6-SD-S2m">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="352"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -106,19 +195,19 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ob3-ui-rTP">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="166"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyh-Ij-7B7">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gyh-Ij-7B7">
                                                         <rect key="frame" x="0.0" y="0.0" width="157" height="166"/>
                                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="🐈"/>
                                                         <connections>
                                                             <action selector="buttonAnswerAHandler:" destination="NV5-nj-59B" eventType="touchUpInside" id="ZXQ-Qc-QE1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MI-Wn-pmz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="6MI-Wn-pmz">
                                                         <rect key="frame" x="177" y="0.0" width="157" height="166"/>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="🐕"/>
                                                         <connections>
                                                             <action selector="buttonAnswerBHandler:" destination="NV5-nj-59B" eventType="touchUpInside" id="a0F-bZ-vyj"/>
@@ -129,19 +218,19 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="whE-aG-M8q">
                                                 <rect key="frame" x="0.0" y="186" width="334" height="166"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKb-cL-ZVz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xKb-cL-ZVz">
                                                         <rect key="frame" x="0.0" y="0.0" width="157" height="166"/>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="🦖"/>
                                                         <connections>
                                                             <action selector="buttonAnswerCHandler:" destination="NV5-nj-59B" eventType="touchUpInside" id="MIr-Od-AEu"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOP-PS-DJk">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LOP-PS-DJk">
                                                         <rect key="frame" x="177" y="0.0" width="157" height="166"/>
                                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="🦒"/>
                                                         <connections>
                                                             <action selector="buttonAnswerDHandler:" destination="NV5-nj-59B" eventType="touchUpInside" id="xK6-mK-hPo"/>
@@ -233,12 +322,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gB0-Sc-bnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="422"/>
+            <point key="canvasLocation" x="468" y="534"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xkZ-Sl-fYd"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -249,8 +344,11 @@
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
