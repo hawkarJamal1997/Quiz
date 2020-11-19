@@ -57,16 +57,60 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func buttonAnswerAHandler(_ sender: Any) {
-        buttonAnswerA.title(for: .normal) == question?.correctAnswer ? showRightAnswerAlert(button: buttonAnswerA) : showWrongAnswerAlert(button: buttonAnswerA)
+        let buttons = [buttonAnswerA, buttonAnswerB, buttonAnswerC, buttonAnswerD]
+        if buttonAnswerA.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: buttonAnswerA)
+        } else {
+        for button in buttons {
+            if button?.title(for: .normal) == question?.correctAnswer {
+                button?.backgroundColor = .green
+                showWrongAnswerAlert(button: buttonAnswerA)
+                break
+            }
+        }
+        }
     }
     @IBAction func buttonAnswerBHandler(_ sender: Any) {
-        buttonAnswerB.title(for: .normal) == question?.correctAnswer ? showRightAnswerAlert(button: buttonAnswerB) : showWrongAnswerAlert(button: buttonAnswerB)
+        let buttons = [buttonAnswerA, buttonAnswerB, buttonAnswerC, buttonAnswerD]
+        if buttonAnswerB.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: buttonAnswerB)
+        } else {
+        for button in buttons {
+            if button?.title(for: .normal) == question?.correctAnswer {
+                button?.backgroundColor = .green
+                showWrongAnswerAlert(button: buttonAnswerB)
+                break
+            }
+        }
+        }
     }
     @IBAction func buttonAnswerCHandler(_ sender: Any) {
-        buttonAnswerC.title(for: .normal) == question?.correctAnswer ? showRightAnswerAlert(button: buttonAnswerC) : showWrongAnswerAlert(button: buttonAnswerC)
+        let buttons = [buttonAnswerA, buttonAnswerB, buttonAnswerC, buttonAnswerD]
+        if buttonAnswerC.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: buttonAnswerC)
+        } else {
+        for button in buttons {
+            if button?.title(for: .normal) == question?.correctAnswer {
+                button?.backgroundColor = .green
+                showWrongAnswerAlert(button: buttonAnswerC)
+                break
+            }
+        }
+        }
     }
     @IBAction func buttonAnswerDHandler(_ sender: Any) {
-        buttonAnswerD.title(for: .normal) == question?.correctAnswer ? showRightAnswerAlert(button: buttonAnswerD) : showWrongAnswerAlert(button: buttonAnswerD)
+        let buttons = [buttonAnswerA, buttonAnswerB, buttonAnswerC, buttonAnswerD]
+        if buttonAnswerD.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: buttonAnswerD)
+        } else {
+        for button in buttons {
+            if button?.title(for: .normal) == question?.correctAnswer {
+                button?.backgroundColor = .green
+                showWrongAnswerAlert(button: buttonAnswerD)
+                break
+            }
+        }
+        }
     }
     
     private func showWrongAnswerAlert(button: UIButton) {
@@ -110,8 +154,6 @@ class QuestionViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultViewController = segue.destination as? ResultViewController {
-            resultViewController.resultView.resultLabel.lineBreakMode = .byWordWrapping
-            resultViewController.resultView.resultLabel.numberOfLines = 0
             resultViewController.resultView.resultLabel.text = "You got \(rightAnswers) right from \(numberOfQuestions) questions. \nCategories: \(categories) \nDifficulty: \(difficulty)"
         }
     }

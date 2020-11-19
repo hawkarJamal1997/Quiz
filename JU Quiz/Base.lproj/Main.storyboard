@@ -100,10 +100,10 @@
                                                 <color key="maximumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <color key="thumbTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
-                                                    <action selector="sliderValue:" destination="4Gs-0X-MZ6" eventType="valueChanged" id="6Ff-5R-SbW"/>
+                                                    <action selector="slider:" destination="4Gs-0X-MZ6" eventType="valueChanged" id="AJ8-aW-NEs"/>
                                                 </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB6-GG-Z0d">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of Questions: 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB6-GG-Z0d">
                                                 <rect key="frame" x="0.0" y="80.5" width="214" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>

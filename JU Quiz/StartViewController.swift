@@ -17,11 +17,6 @@ class StartViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var sliderValueLabel: UILabel!
     
-    @IBAction func sliderValue(_ sender: Any) {
-        amount = Int(slider.value)
-        sliderValueLabel.text = "Amount:\(amount)"
-        print(amount, "slide")
-    }
     
     @IBAction func buttonEasy(_ sender: Any) {
         difficulty = "easy"
@@ -35,11 +30,15 @@ class StartViewController: UIViewController {
         difficulty = "hard"
     }
     
+    @IBAction func slider(_ sender: UISlider) {
+        amount = Int(sender.value)
+        sliderValueLabel.text = "Amount of Questions: \(amount)"
+        downloadQuestions(amount: amount, difficulty: difficulty)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        amount = Int(slider.value)
-        print(amount, "load")
-        downloadQuestions(amount: amount, difficulty: difficulty)
+       
         // Do any additional setup after loading the view.
     }
     
@@ -48,7 +47,6 @@ class StartViewController: UIViewController {
             else {
             return
         }
-        
         let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
             guard let data = data else {
                 print(error)
@@ -68,10 +66,12 @@ class StartViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let questionViewController = segue.destination as? QuestionViewController {
-            
             questionViewController.numberOfQuestions = questions.count
             questionViewController.questions = questions
             questionViewController.difficulty = difficulty
+            
+            let categories = questions.map({ $0.category})
+            questionViewController.categories = categories
         }
     }
 

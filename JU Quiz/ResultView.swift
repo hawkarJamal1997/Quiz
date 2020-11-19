@@ -42,8 +42,9 @@ class ResultView: UIView {
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
         resultLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30).isActive = true
         resultLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor).isActive = true
+        resultLabel.lineBreakMode = .byWordWrapping
+        resultLabel.numberOfLines = 0
     
-        //Bakcground for score
         let imageView = UIImageView(image: #imageLiteral(resourceName: "resultBoard"))
         addSubview(imageView)
         
