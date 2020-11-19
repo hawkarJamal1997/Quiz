@@ -16,6 +16,9 @@ class StartViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var sliderValueLabel: UILabel!
+    @IBOutlet weak var buttonEasy: UIButton!
+    @IBOutlet weak var buttonMedium: UIButton!
+    @IBOutlet weak var buttonHard: UIButton!
     
     
     @IBAction func buttonEasy(_ sender: Any) {
@@ -38,7 +41,10 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        let buttons = [buttonEasy, buttonMedium, buttonHard]
+        for button in buttons {
+            button?.isEnabled = false
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -47,7 +53,7 @@ class StartViewController: UIViewController {
             else {
             return
         }
-        let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
+        let task = URLSession.shared.dataTask(with: url) { [weak self] (data, _, error) in
             guard let data = data else {
                 print(error)
                 return
@@ -55,7 +61,14 @@ class StartViewController: UIViewController {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let questionsResult = try? decoder.decode(QuestionResult.self, from: data)
-            self.questions = questionsResult?.results ?? []
+            self?.questions = questionsResult?.results ?? []
+            
+            DispatchQueue.main.async {
+                let buttons = [self?.buttonEasy, self?.buttonMedium, self?.buttonHard]
+                for button in buttons {
+                    button?.isEnabled = true
+                }
+            }
         }
         task.resume()
     }

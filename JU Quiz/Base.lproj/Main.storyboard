@@ -94,7 +94,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-wL-gVe">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="101"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-Af-imY">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-Af-imY">
                                                 <rect key="frame" x="-2" y="0.0" width="218" height="81.5"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGreenColor"/>
@@ -103,7 +103,7 @@
                                                     <action selector="slider:" destination="4Gs-0X-MZ6" eventType="valueChanged" id="AJ8-aW-NEs"/>
                                                 </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of Questions: 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB6-GG-Z0d">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of Questions: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB6-GG-Z0d">
                                                 <rect key="frame" x="0.0" y="80.5" width="214" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -161,6 +161,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="XVw-59-7Oz"/>
                     <connections>
+                        <outlet property="buttonEasy" destination="Bub-3R-dgU" id="sUj-dZ-RhG"/>
+                        <outlet property="buttonHard" destination="FC3-4k-0eB" id="cy9-n6-bOi"/>
+                        <outlet property="buttonMedium" destination="NII-9B-Lbo" id="dtf-Jb-TvB"/>
                         <outlet property="slider" destination="swQ-Af-imY" id="U3R-DU-rCR"/>
                         <outlet property="sliderValueLabel" destination="WB6-GG-Z0d" id="LWR-a6-ZL4"/>
                     </connections>
