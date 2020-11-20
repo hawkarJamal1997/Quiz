@@ -33,7 +33,7 @@ class ResultView: UIView {
     
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
-        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
         
         resultLabel.font = UIFont.preferredFont(forTextStyle: .callout)
         resultLabel.adjustsFontForContentSizeCategory = true
@@ -41,7 +41,7 @@ class ResultView: UIView {
         
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
         resultLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30).isActive = true
-        resultLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor).isActive = true
+        resultLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
         resultLabel.lineBreakMode = .byWordWrapping
         resultLabel.numberOfLines = 0
     

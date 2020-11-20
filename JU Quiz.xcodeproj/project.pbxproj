@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78255ECA256842B200CA0843 /* String+HtmlDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78255EC9256842B200CA0843 /* String+HtmlDecoding.swift */; };
 		783A3E48255CAE510011C21F /* info.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 783A3E46255CAE510011C21F /* info.jpg */; };
 		783A3E49255CAE510011C21F /* infoProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 783A3E47255CAE510011C21F /* infoProfile.png */; };
 		784DBC9D25668E8C001F270F /* GameResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784DBC9B25668E8C001F270F /* GameResult+CoreDataClass.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78255EC9256842B200CA0843 /* String+HtmlDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HtmlDecoding.swift"; sourceTree = "<group>"; };
 		783A3E46255CAE510011C21F /* info.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = info.jpg; sourceTree = "<group>"; };
 		783A3E47255CAE510011C21F /* infoProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoProfile.png; sourceTree = "<group>"; };
 		784DBC9B25668E8C001F270F /* GameResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -154,13 +156,14 @@
 				8A7F795A254AF158009F4299 /* AppDelegate.swift */,
 				8A7F795C254AF158009F4299 /* SceneDelegate.swift */,
 				8A7F7960254AF158009F4299 /* Main.storyboard */,
-				8AD818CC2552AF040054533B /* InformationViewController.swift */,
 				8A7F7966254AF15B009F4299 /* Assets.xcassets */,
 				8A7F7968254AF15B009F4299 /* LaunchScreen.storyboard */,
 				8A7F796B254AF15B009F4299 /* Info.plist */,
 				8A7F7963254AF158009F4299 /* JU_Quiz.xcdatamodeld */,
-				784DBCA22566945D001F270F /* HighscoreTableViewController.swift */,
 				78759CFC25631B410070A48A /* StartViewController.swift */,
+				784DBCA22566945D001F270F /* HighscoreTableViewController.swift */,
+				8AD818CC2552AF040054533B /* InformationViewController.swift */,
+				78255EC9256842B200CA0843 /* String+HtmlDecoding.swift */,
 			);
 			path = "JU Quiz";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78255ECA256842B200CA0843 /* String+HtmlDecoding.swift in Sources */,
 				8A7F795B254AF158009F4299 /* AppDelegate.swift in Sources */,
 				784DBCA32566945D001F270F /* HighscoreTableViewController.swift in Sources */,
 				78759CF8256315970070A48A /* Question.swift in Sources */,
