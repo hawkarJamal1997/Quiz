@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		783A3E48255CAE510011C21F /* info.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 783A3E46255CAE510011C21F /* info.jpg */; };
 		783A3E49255CAE510011C21F /* infoProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 783A3E47255CAE510011C21F /* infoProfile.png */; };
+		784DBC9D25668E8C001F270F /* GameResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784DBC9B25668E8C001F270F /* GameResult+CoreDataClass.swift */; };
+		784DBC9E25668E8C001F270F /* GameResult+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784DBC9C25668E8C001F270F /* GameResult+CoreDataProperties.swift */; };
+		784DBCA32566945D001F270F /* HighscoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784DBCA22566945D001F270F /* HighscoreTableViewController.swift */; };
 		78759CDE2562F9050070A48A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78759CDD2562F9050070A48A /* ResultViewController.swift */; };
 		78759CE62562FA6A0070A48A /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78759CE52562FA6A0070A48A /* ResultView.swift */; };
 		78759CEB256309060070A48A /* resultBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 78759CEA256309060070A48A /* resultBackground.png */; };
@@ -48,6 +51,9 @@
 /* Begin PBXFileReference section */
 		783A3E46255CAE510011C21F /* info.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = info.jpg; sourceTree = "<group>"; };
 		783A3E47255CAE510011C21F /* infoProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoProfile.png; sourceTree = "<group>"; };
+		784DBC9B25668E8C001F270F /* GameResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataClass.swift"; sourceTree = "<group>"; };
+		784DBC9C25668E8C001F270F /* GameResult+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		784DBCA22566945D001F270F /* HighscoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoreTableViewController.swift; sourceTree = "<group>"; };
 		78759CDD2562F9050070A48A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		78759CE52562FA6A0070A48A /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		78759CEA256309060070A48A /* resultBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resultBackground.png; sourceTree = "<group>"; };
@@ -98,6 +104,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		786D2AE12567E6E000D040BE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				784DBC9C25668E8C001F270F /* GameResult+CoreDataProperties.swift */,
+				784DBC9B25668E8C001F270F /* GameResult+CoreDataClass.swift */,
+				78759CF7256315970070A48A /* Question.swift */,
+				78DB1A5A2564825E006595D1 /* QuestionResult.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		786D2AE82567E73B00D040BE /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				78759CE52562FA6A0070A48A /* ResultView.swift */,
+				78759CDD2562F9050070A48A /* ResultViewController.swift */,
+				8A7F7999254B03F7009F4299 /* QuestionViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		8A7F794E254AF158009F4299 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +149,8 @@
 		8A7F7959254AF158009F4299 /* JU Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				786D2AE82567E73B00D040BE /* Game */,
+				786D2AE12567E6E000D040BE /* Data */,
 				8A7F795A254AF158009F4299 /* AppDelegate.swift */,
 				8A7F795C254AF158009F4299 /* SceneDelegate.swift */,
 				8A7F7960254AF158009F4299 /* Main.storyboard */,
@@ -130,12 +159,8 @@
 				8A7F7968254AF15B009F4299 /* LaunchScreen.storyboard */,
 				8A7F796B254AF15B009F4299 /* Info.plist */,
 				8A7F7963254AF158009F4299 /* JU_Quiz.xcdatamodeld */,
-				8A7F7999254B03F7009F4299 /* QuestionViewController.swift */,
-				78759CDD2562F9050070A48A /* ResultViewController.swift */,
-				78759CE52562FA6A0070A48A /* ResultView.swift */,
-				78759CF7256315970070A48A /* Question.swift */,
+				784DBCA22566945D001F270F /* HighscoreTableViewController.swift */,
 				78759CFC25631B410070A48A /* StartViewController.swift */,
-				78DB1A5A2564825E006595D1 /* QuestionResult.swift */,
 			);
 			path = "JU Quiz";
 			sourceTree = "<group>";
@@ -304,10 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7F795B254AF158009F4299 /* AppDelegate.swift in Sources */,
+				784DBCA32566945D001F270F /* HighscoreTableViewController.swift in Sources */,
 				78759CF8256315970070A48A /* Question.swift in Sources */,
 				8A7F795D254AF158009F4299 /* SceneDelegate.swift in Sources */,
 				8A7F799A254B03F7009F4299 /* QuestionViewController.swift in Sources */,
+				784DBC9D25668E8C001F270F /* GameResult+CoreDataClass.swift in Sources */,
 				8A7F7965254AF158009F4299 /* JU_Quiz.xcdatamodeld in Sources */,
+				784DBC9E25668E8C001F270F /* GameResult+CoreDataProperties.swift in Sources */,
 				78759CFD25631B410070A48A /* StartViewController.swift in Sources */,
 				78DB1A5B2564825E006595D1 /* QuestionResult.swift in Sources */,
 				8AD818CD2552AF040054533B /* InformationViewController.swift in Sources */,

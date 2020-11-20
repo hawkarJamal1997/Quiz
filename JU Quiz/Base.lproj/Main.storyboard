@@ -34,10 +34,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zH5-hT-qG5">
-                                <rect key="frame" x="120" y="338" width="174" height="274"/>
+                                <rect key="frame" x="100" y="288" width="214" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqo-lm-fbN">
-                                        <rect key="frame" x="0.0" y="0.0" width="174" height="112"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="91.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                         <size key="titleShadowOffset" width="1" height="1"/>
@@ -49,8 +49,21 @@
                                             <segue destination="4Gs-0X-MZ6" kind="show" id="TRL-Wu-QXa"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVa-JB-hXs">
+                                        <rect key="frame" x="0.0" y="141.5" width="214" height="91"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Highscores">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <color key="titleShadowColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="highscoreButtonHandler:" destination="6mi-Mo-iMw" eventType="touchUpInside" id="l85-oa-KID"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjK-N2-D4G">
-                                        <rect key="frame" x="0.0" y="162" width="174" height="112"/>
+                                        <rect key="frame" x="0.0" y="282.5" width="214" height="91.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                         <size key="titleShadowOffset" width="1" height="1"/>
@@ -68,10 +81,10 @@
                         <viewLayoutGuide key="safeArea" id="47f-Ax-ElH"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
-                            <constraint firstItem="zH5-hT-qG5" firstAttribute="leading" secondItem="47f-Ax-ElH" secondAttribute="leading" constant="120" id="6cA-8d-3aL"/>
-                            <constraint firstItem="zH5-hT-qG5" firstAttribute="bottom" secondItem="47f-Ax-ElH" secondAttribute="bottom" constant="-250" id="9tR-B9-JsS"/>
-                            <constraint firstItem="zH5-hT-qG5" firstAttribute="trailing" secondItem="47f-Ax-ElH" secondAttribute="trailing" constant="-120" id="KUq-PS-gM9"/>
-                            <constraint firstItem="zH5-hT-qG5" firstAttribute="top" secondItem="47f-Ax-ElH" secondAttribute="top" constant="250" id="OUh-3w-DYP"/>
+                            <constraint firstItem="zH5-hT-qG5" firstAttribute="leading" secondItem="47f-Ax-ElH" secondAttribute="leading" constant="100" id="6cA-8d-3aL"/>
+                            <constraint firstItem="zH5-hT-qG5" firstAttribute="bottom" secondItem="47f-Ax-ElH" secondAttribute="bottom" constant="-200" id="9tR-B9-JsS"/>
+                            <constraint firstItem="zH5-hT-qG5" firstAttribute="trailing" secondItem="47f-Ax-ElH" secondAttribute="trailing" constant="-100" id="KUq-PS-gM9"/>
+                            <constraint firstItem="zH5-hT-qG5" firstAttribute="top" secondItem="47f-Ax-ElH" secondAttribute="top" constant="200" id="OUh-3w-DYP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="JU Quiz" id="Z99-fK-NHf"/>

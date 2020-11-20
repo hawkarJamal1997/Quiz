@@ -20,6 +20,10 @@ class StartViewController: UIViewController {
     @IBOutlet weak var buttonMedium: UIButton!
     @IBOutlet weak var buttonHard: UIButton!
     
+    @IBAction func highscoreButtonHandler(_ sender: Any) {
+        let highscoreTableViewController = HighscoreTableViewController()
+        navigationController?.pushViewController(highscoreTableViewController, animated: true)
+    }
     
     @IBAction func buttonEasy(_ sender: Any) {
         difficulty = "easy"
